@@ -24,7 +24,7 @@ printf("\n");
 
 int checkwinner(char T[3][3])
 {
-    // Checking for Rows for X or O victory.
+    // verefier rles lignes .
     for (int row = 0; row<3; row++)
     {
         if (T[row][0]==T[row][1] &&
@@ -37,7 +37,7 @@ int checkwinner(char T[3][3])
         }
     }
  
-    // Checking for Columns for X or O victory.
+    // erefier les colonnes 
     for (int col = 0; col<3; col++)
     {
         if (T[0][col]==T[1][col] &&
@@ -51,7 +51,7 @@ int checkwinner(char T[3][3])
         }
     }
  
-    // Checking for Diagonals for X or O victory.
+    // verefications des diagonales
     if (T[0][0]==T[1][1] && T[1][1]==T[2][2])
     {
         if (T[0][0]=='X')
@@ -149,10 +149,11 @@ int minimax(char T[3][3], int depth, int isMaximizing, int firstTime ) {
 void TIC_TAC_TAO()
 {
 int end = 1 ;
+ guide();
+
  while ( end  == 1)
  {int indiceLigne ;
  int indiceColonne ;
- guide();
    printf("entrer les indices de la case ou vous voullez jouer <taper > ");
    printf("\n ligne :");
    scanf("%d",&indiceLigne);
@@ -162,7 +163,6 @@ int end = 1 ;
    { if (T[indiceLigne][indiceColonne] == ' '){
           T[indiceLigne][indiceColonne] = 'X';
            int result = minimax(T, 100, 0 , 1);
-           printf("min maxx  = %d\n", result);
           showTable(T);
           end = checkwinner(T) ;
       }
