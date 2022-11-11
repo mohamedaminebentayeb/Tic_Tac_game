@@ -171,9 +171,9 @@ void TIC_TAC_TAO()
                             }
 
             }
-            if (end == 2 ){printf(" \n ********************COngratulation , you win !******************\n");};
+            if (end == 2 ){printf(" \n ******************** Congratulation , you win !******************\n");};
             if (end == -2 ){printf(" \n ******************** I'm the winner!******************\n");};
-            if (end == 0 ){printf(" \n ********************Good job  !******************\n");};
+            if (end == 0 ){printf(" \n ******************** Good job !******************\n");};
 
 
 }
@@ -182,7 +182,7 @@ void menu ()
 
     printf("\n ************** menu **************\n");
     printf("1- NOUVELLE PARTIE \n");
-    printf("2- Quitter \n");
+    printf("2- QUITETR \n");
 
 }
 void init()
